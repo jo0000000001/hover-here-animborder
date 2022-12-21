@@ -1,0 +1,90 @@
+body{
+    background-color: #1f1f1fb3;
+    height: 120vh;
+}
+.container{
+    border: 3px solid #fff;
+    height: 300px;
+    width: 500px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    transition: ease-out 0.5s;
+    animation: border-animation 2s linear infinite;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.container .lowerdiv{
+    display: none;
+    transition: ease-out 0.5s;
+}
+.container:hover{
+    height: 600px;
+    width: 500px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    box-shadow: #c545f1 -50px -40px 70px 4px,#828ff9 50px 40px 70px 0px;
+    overflow: hidden;
+    border: 0;
+}
+.container .upperdiv p{
+    margin-left: 38%;
+    font-family: fantasy;
+    font-size: 20px;
+    color: #fff;
+}
+.container:hover .upperdiv p
+{
+    display: none;
+}
+.container .upperdiv{
+    animation: border-animation 2s linear infinite;
+}
+.container:hover .upperdiv{
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    z-index: 1;
+    background-image: linear-gradient(to right,#c545f1,#af39e5,#964fe6,#8f49de,#828ff9);
+    box-shadow:rgba(237, 237, 237, 0.56) 0px 22px 70px 4px,#828ff9 0px 25px 75px 6px,#c545f1 0px 30px 80px 8px;
+    border-radius: 0 0 10px 10px;
+}
+.upperdiv img{
+   margin: 15% 0 0 35%;
+   filter: drop-shadow(5px 5px 15px rgb(65, 64, 64));
+}
+.container:hover .lowerdiv{
+   display: block;
+    position: absolute;
+    top: 35%;
+    width:100%;
+    height: 65%;
+    background-color: #fff;
+
+}
+.container .lowerdiv p{
+    margin: 20% 5% 10% 5%;
+    font-family: cursive;
+}
+.container .lowerdiv button{
+    margin: 0% 5% 10% 5%;
+    height: 50px;
+    border: #000 5px dotted;
+    background-color: unset;
+    animation: border-animation 2s linear infinite;
+}
+@keyframes border-animation{
+    0%{border-color: #c545f1;}
+    25%{border-color: #828ff9;}
+    50%{border-color:#3174c7;}
+    75%{border-color: #8f49de;}
+    100%{border-color: #af39e5;}
+}
+.container .lowerdiv button a{
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    font-family: cursive;
+    color: #000;
+}
